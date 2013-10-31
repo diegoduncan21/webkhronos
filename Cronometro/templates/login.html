@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block slider %}
+<table id="login-form" class="slidable semiwhite">
+	<tr>
+		<td colspan=2><div id="login-user-message"></div></td>
+	</tr>
+	<tr>
+		<td><label>Usuario:</label></td>
+		<td><input type="text" id="login-user"></td>
+	</tr>
+	<tr>
+		<td colspan=2><div id="login-pass-message"></div></td>
+	</tr>
+	<tr>
+		<td><label>Pass:</label></td>
+		<td><input type="password" id="login-password"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><button id="login-btn" class="btn">Ingresar</button> o <a href="" id="register-link">Registrarse</a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<center><a href="{% url django.contrib.auth.views.password_reset %}" id="forgot-password">Olvide mi password</a></center>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript" src="{{ STATIC_URL }}/javascript/LoginForm.js"></script>
+{% endblock %}

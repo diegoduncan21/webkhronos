@@ -1,0 +1,125 @@
+{% extends "base_web.html" %}
+
+{% block contenido %}
+
+	<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          
+            <ul class="nav nav-list bs-docs-sidenav affix">
+              <li class="nav-header">EMPEZANDO</li>
+              <li class="active"><a href="#registrarse">Registrarse</a></li>
+			        <li><a href="#l_desl">Logueo/Deslogueo</a></li>
+              <li class="nav-header">UTILIZANDO EL CRONÓMETRO</li>
+              <li><a href="#add_proy">Agregar proyecto</a></li>
+              <li><a href="#add_tarea">Agregar tarea</a></li>
+              <li><a href="#selec_proy">Selccionar proyecto</a></li>
+              <li><a href="#selec_tarea">Seleccionar tarea</a></li>
+              <li><a href="#manejar">Manejar cronómetro</a></li>
+      			  <li class="nav-header">REPORTES</li>
+      			  <li><a href="#busq_in">Busqueda de intervalos</a></li>
+      			  <li><a href="#ver_estad">Ver estadísticas</a></li>
+      			  <li class="nav-header">AVANZADO</li>
+      			  <li><a href="#camb_aj">Cambiar Ajustes</a></li>
+            </ul>
+          
+        </div><!--/span-->
+        <div id="derecha" class="span9">
+          
+          <div class="row-fluid">
+            <div class="span9">
+              <a name="registrarse"><h2>Registrarse</h2></a>
+              <p>Esta sección está destinada para aquellas personas que aún no han utilizado nunca Khronos y desean crear un nuevo usuario.</p>
+      			  <p>El proceso para registrar un nuevo usuario consiste de cargar en la plantilla inicial un nombre de usuario, una dirección de correo
+      			  electrónico, contraseña y verificación de contraseña.</p>
+      			  <p>El sistema verifica que todos los campos no se encuentren vacíos, además que el nombre de usuario no coincida con uno ya existente,
+      			  que las contraseñas ingresadas sean coincidentes entre sí, entre otros. En caso de que en alguno de los campos falte información o no
+      			  sea conincidente con los correspondientes, el sistema soicitará su re-ingreso.</p>
+      			  <p>Una vez verificado todo eso, el sistema registra al usuario y realiza un logueo automático para el mismo.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="l_desl"><h2>Logueo/Deslogueo</h2></a>
+              <p>Aquí el usuario ya registrado debe ingresar su nombre de usuario y contraseña para empezar a utilizar Khronos. En caso de un ingreso incorrecto
+				en alguno de los datos, el sistema solicitará su re-ingreso.</p>
+				<p>Una vez verificada la coincidencia de los datos registrados, el sistema deplegará al usuario el panel principal de Khronos.</p>
+				<p>Para el deslogueo, el usuario debe solo hacer click en su nombre de usuario que aparece en la parte baja del panel principal de Khronos.
+				De esta manera, Khronos estará ahora disponible para que otro usuario se loguee o bien para el registro de uno nuevo.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="add_proy"><h2>Agregar Proyecto</h2></a>
+              <p>Menú que permite agregar un nuevo proyecto. Para agregar un proyecto hacemos click en el signo más del módulo 
+			  “Proyectos” y nos va a pedir que definamos un Nombre y luego pasamos a definir las tareas que lo componen.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="add_tarea"><h2>Agregar Tarea</h2></a>
+              <p>Se agregan y definen las tareas necesarias para llevar adelante el proyecto, se agrega una breve una descripción o anotaciones en cada una.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="selec_proy"><h2>Seleccionar Proyecto</h2></a>
+              <p>En una tabla ordenada podemos buscar entre una lista de proyectos existentes y creados por el usuario, alguno en particular. 
+			  Simplemente se debe hacer click sobre el nombre de proyecto en el que se va a trabajar para ver las tareas que lo componen y su descripción. </p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="selec_tarea"><h2>Seleccionar Tarea</h2></a>
+              <p>Una vez que se ha seleccionado un proyecto, el sistema ha desplegado la lista de tareas que lo componen. Para seleccionar una de ellas,
+				el usuario debe nada más hacer click en la elegida.</p>
+				<p>Como resultado, el sistema mostrará la lista de intervalos que compnen dicha tarea.</p>
+				<P>En este punto, teniendo ya seleccionados un proyecto y una tarea, podemos empezar a utilizar el cronómetro.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+			  <a name="manejar"><h2>Manejar Cronómetro</h2></a>
+              <p>En esta sección el usuario puede empezar, finalmente, a utilizar el cronómetro. El mismo mostrará el avance en el tiempo que se encuentra 
+			  transcurriendo para un determinado proyecto y para una determinada tarea.</p>
+			  <p>Para comenzar, el usuario previamente ha seleccionado el proyecto sobre el que quiere trabajar, como así también la tarea.</p>
+			  <p>El usuario debe hacer click sobre el botón "play" para empezar a contabilizar el tiempo. En este punto el usuario puede, o bien pausar el 
+			  cronómetro, o bien detenerlo. Solo en el caso de que lo haya pausado podrá volver a poner "play", de esa manera el cronómetro seguirá corriendo.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="busq_in"><h2>Búsqueda de intervalos</h2></a>
+              <p>Para conocer los intervalos de tiempo el usuario debe seleccionar un proyecto y luego una tarea. Una vez que se han seleccionado, el sistema
+				muestra una lista ordenada de los mismos.</p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name="ver_estad"><h2>Ver estadísticas</h2></a>
+              <p>Esta herramienta nos permite poder ver un gráfico representativo del avance del proyecto. Puede optar por dos alternativas, un diagrama circular u otro de barras. </p>
+              
+            </div><!--/span-->
+          </div>
+		  <div class="row-fluid">
+            <div class="span9">
+              <a name"camb_aj"><h2>Cambiar Ajustes</h2></a>
+              <p>En este menú podemos Activar/Desactivar las descripciones que aparecen en cada botón (tooltips). También podemos encontrar las opciones para cambiar la contraseña del usuario. </p>
+              
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+
+    </div>		
+
+{% endblock %}

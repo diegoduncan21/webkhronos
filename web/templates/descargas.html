@@ -1,0 +1,29 @@
+{% extends "base_web.html" %}
+{% block contenido %}
+	<h2>Descargar Khronos</h2>
+	<br>	
+	{% if programas %}
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Version</th>
+					<th>32 bits</th>
+					<th>64 bits</th>
+					<th>Mejoras</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for a in programas %}
+					<tr>
+						<td>{{a.version}}</td>
+						<td><a href="{{a.archivo32}}">descargar</a></td>
+						<td><a href="{{a.archivo64}}">descargar</a></td>
+						<td>{{a.descripcion}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<h2>No hay aplicaciones</h2>
+	{% endif %}
+{% endblock %}

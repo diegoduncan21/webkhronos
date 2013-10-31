@@ -1,0 +1,121 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	color: #DDDDDD;
+	background-color: #222222;
+}
+
+#contenedor {
+	min-height:768px;
+}
+
+#container {
+	color: #000;
+	width : 300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+	background-color: white;
+	background-image:url('../img/clock.png');
+	overflow:hidden;
+	border:solid 2px;
+	border-radius:4px;
+}
+
+#contenedor {
+	background-color: #222222;
+}
+
+#forgot-password {
+	font-size:9px;
+}
+
+.accordion-group {
+	background-color:rgba(255,255,255,0.8);
+}
+
+.transparent {
+	background-color:rgba(255,255,255,0);
+}
+
+.title-khronos {
+	background-color:#787878;
+	color:#FFF;
+	border-top:solid #0072C1;
+	border-bottom:solid #0072C1;
+	font-style:italic;
+}
+.mini-table {
+	font-size:9px;
+}
+
+#modal-confirm-change {
+	font-size:9px;
+	width:200px;
+}
+
+#intervals-table {
+	margin-bottom:3px;
+}
+
+#activitie-play-btn {
+	float:right;
+	margin-top:-5px;
+}
+
+#intervals-chart-container {
+	padding-left:auto;
+	padding-right:auto;
+	
+}
+
+#slider {
+	padding:2px;
+}
+
+#slider, .slidable {
+	position:relative;
+}
+
+.hided {
+	display:none;
+}
+
+#cron-input {
+	width:115px;
+}
+
+#intervals-table-container {
+	height:200px;
+	overflow-y:scroll;
+}
+
+#project-input, #activitie-input {
+	width:195px;
+}
+#project-form, #project-input-message,
+#activities-form, #activitie-input-message {
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#main-panel-accordion {
+	left : -350px;
+}
+
+.semiwhite {
+	background-color:rgba(255,255,255,0.8);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.zero-margin {
+	margin: 0px;
+}
+
+.acordion-scrollable {
+	height:120px;
+	overflow-y:scroll;
+}

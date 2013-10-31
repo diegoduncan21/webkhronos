@@ -1,0 +1,62 @@
+{% extends "base_web.html" %}
+
+	{% block extrahead %} 
+	<script type="text/javascript" src="{{ STATIC_URL }}javascript/Khronos.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}javascript/jquery-tmpl.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load('visualization', '1.0', {'packages':['corechart']});
+	</script>
+	{% endblock %}
+
+{% block contenido %}
+<div id="container">
+<div id="slider">
+	<div class="accordion-group transparent">
+		<div class="accordion-heading">
+			<img src="{{ STATIC_URL }}/img/header.gif" />
+		</div>
+	</div>
+	
+	<!-- Actividad y Projecto activos -->
+	<div class="accordion-group" style="display:none" id="active-project-activitie">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+				<span id="active-project"></span> - <span id="active-activitie"></span>
+			</a>
+		</div>
+	</div>
+	
+	<!-- Cronometro -->
+	<div class="accordion-group" style="display:none" id="cronometer-control">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">
+				<div class="input-prepend input-append">
+					<span class="add-on"><i class="icon-time"></i></span>
+					<input class="span2" id="cron-input" type="text" placeholder="00:00:00">
+					<button class="btn" id="btn-play"><i class="icon-play"></i></button>
+					<button class="btn" id="btn-pause"><i class="icon-pause"></i></button>
+					<button class="btn" id="btn-stop"><i class="icon-stop"></i></button>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- Nav Bar -->
+	<div class="accordion-group" style="display:none" id="app-navbar">
+		<div class="accordion-heading">
+			<a id="help-btn" href=""><i class="icon-question-sign"></i></a>  
+			<i class="icon-help"></i><a id="inicio-btn" href="">Inicio</a>
+			<i class="icon-help"></i><a id="nav-projects-btn" style="display:none" href=""></a>
+			<i class="icon-help"></i><a id="nav-activitie-btn" style="display:none" href=""></a>
+		</div>
+	</div>
+	{% block slider %}{% endblock %}
+	<div id='main-panel-acordion' class="slidable"></div>
+	<div id='register-form' class="slidable"></div>
+	<div class="accordion slidable" id="project-panel"></div>
+	<div class="accordion slidable" id="activitie-panel"></div>
+	<div class="accordion slidable" id="activitie-details-panel"></div>
+</div>
+</div>
+{% endblock %}
+

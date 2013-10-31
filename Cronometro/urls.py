@@ -1,0 +1,26 @@
+from django.conf.urls import patterns, url
+
+
+urlpatterns = patterns('',
+	url(r'^save_settings/$', 'Cronometro.views.save_settings', name='save_settings'),
+	url(r'^get_user_settings/$', 'Cronometro.views.get_user_settings', name='get_user_settings'),
+	url(r'^cron_stop/$', 'Cronometro.views.cron_stop', name='cron_stop'),
+	url(r'^get_activitie_intervals/$', 'Cronometro.views.get_activitie_intervals', name='get_activitie_intervals'),
+	url(r'^cron_play/$', 'Cronometro.views.cron_play', name='cron_play'),
+	url(r'^activitie_details_panel/(?P<activitie_id>\d+)/$', 'Cronometro.views.activitie_details_panel', name='activitie_details_panel'),
+	url(r'^search_project_activities/$', 'Cronometro.views.search_project_activities', name='search_project_activities'),
+	url(r'^add_activitie/$', 'Cronometro.views.add_activitie', name='add_activitie'),
+	url(r'^activitie_panel/(?P<project_id>\d+)/$', 'Cronometro.views.activitie_panel', name='activitie_panel'),
+	url(r'^get_project_activities/(?P<project_id>\d+)/', 'Cronometro.views.get_project_activities', name='get_project_activities'),
+	url(r'^search_user_projects/', 'Cronometro.views.search_user_projects', name='search_user_projects'),
+	url(r'^get_user_projects/', 'Cronometro.views.get_user_projects', name='get_user_projects'),
+	url(r'^add_project/', 'Cronometro.views.add_project', name='add_project'),
+	url(r'^project_panel/', 'Cronometro.views.project_panel', name='project_panel'),
+	url(r'^salir/', 'Cronometro.views.salir', name='salir'),
+	url(r'^is_loged_in/', 'Cronometro.views.is_loged_in', name='is_loged_in'),
+	url(r'^main_panel/', 'Cronometro.views.main_panel', name='main_panel'),
+	url(r'^$', 'Cronometro.views.login', name='login'),
+	url(r'^login/', 'Cronometro.views.login', name='login'),
+	url(r'^register/', 'Cronometro.views.register', name='register'),
+	url(r'^inicio/', 'Cronometro.views.inicio', name='inicio'),
+)

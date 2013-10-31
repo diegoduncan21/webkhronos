@@ -1,0 +1,59 @@
+{% extends "base_web.html" %}  
+{% block extrahead %}
+	<style>
+		.hero-unit{
+			background-image:url('{{STATIC_URL}}img/banner_clock.jpg');
+			height:auto;
+			background-repeat:no-repeat;
+			background-position:center; 
+			opacity:0.8;
+			color:black;
+		}
+		.hero-unit img{		
+			height: 100%; 
+		}
+	</style>
+{% endblock %}
+{% block contenido %}
+	
+	<!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" >
+      	<div>
+      		<h1>Khronos!</h1><i style="margin-left: 170px;"><u>Ver. {{ultima_app.version}}</u></i>
+	        <p>
+	        	Es un widget interactivo y único orientado a desarrolladores 
+	        	freelance y gestores de software para ayudarlos
+	        	en la difícil tarea de la calendarización de proyectos.
+	        	Permite llevar un conteo progresivo del tiempo, 
+          		almacenar un registro de las horas dedicadas a un determinado 
+          		proyecto y obtener el tiempo total
+			</p>
+	        <p><a href="#" class="btn btn-success btn-large">Aprende más &raquo;</a></p>
+	      		
+      		
+      	</div>
+      	
+      	
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Mejoras</h2>
+          <p>
+          	{{ultima_app.descripcion}}
+          </p>
+          
+        </div>
+        <div class="span4">
+          <h2>Versión 32 bits</h2>
+          
+          <p><a class="btn btn-success" href="{{ultima_app.archivo32}}">Descargar &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Versión 64 bits</h2>
+          <p><a class="btn btn-success" href="{{ultima_app.archivo64}}">Descargar &raquo;</a></p>
+        </div>
+      </div>
+
+{% endblock %}

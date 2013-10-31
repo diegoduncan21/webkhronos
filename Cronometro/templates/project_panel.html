@@ -1,0 +1,29 @@
+<!-- Form carga busqueda proyectos -->
+<div class="accordion-group transparent">
+	<div class="accordion-heading">
+		<div class="input-append" id="project-form">
+		  <input class="span2" type="text" id="project-input" placeholder="proyectos...">
+		  <button class="btn" type="button" id="add-project-button"><i class="icon-plus"></i></button>
+		  <button class="btn" type="button" id="search-project-button"><i class="icon-search"></i></button>
+		</div>
+		<div id="project-input-message" class="zero-margin"></div>
+	</div>
+</div>
+
+<!-- Proyectos -->
+<div id="projects-list" class="acordion-scrollable">
+</div>
+<div id="search-projects-list" class="acordion-scrollable hided">
+</div>
+
+<script type="text/javascript" src="{{ STATIC_URL }}/javascript/ProjectPanel.js"></script>
+
+<script type="text/x-jquery-tmpl" id="project-row-tmpl">
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="" id="project-row-${id}">
+					<i class="icon-folder-open"></i> ${ nombre }
+			</a>
+		</div>
+	</div>
+</script>

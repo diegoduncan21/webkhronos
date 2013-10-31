@@ -1,0 +1,34 @@
+<!-- Form carga busqueda tareas -->
+<input type="hidden" value="{{project.id}}" id="project-activities-id">
+<input type="hidden" value="{{project.nombre}}" id="project-activities-name">
+<div class="accordion-group">
+	<div class="accordion-inner">
+		<a><i class="icon-file"></i>Proyecto: {{project.nombre}}</a>
+	</div>
+	<div class="accordion-heading">
+		<div class="input-append" id="activities-form">
+		  <input class="span2" type="text" id="activitie-input" placeholder="tareas...">
+		  <button class="btn" type="button" id="add-activitie-button"><i class="icon-plus"></i></button>
+		  <button class="btn" type="button" id="search-activitie-button"><i class="icon-search"></i></button>
+		</div>
+		<div id="activitie-input-message" class="zero-margin"></div>
+	</div>
+</div>
+
+<!-- Tareas -->
+<div id="activities-list" class="acordion-scrollable">
+</div>
+<div id="search-activitie-list" class="acordion-scrollable hided">
+</div>
+
+<script type="text/javascript" src="{{ STATIC_URL }}/javascript/ActivitiePanel.js"></script>
+
+<script type="text/x-jquery-tmpl" id="activitie-row-tmpl">
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" href="" id="activitie-row-${id}">
+					<i class="icon-list"></i> ${ nombre }
+			</a>
+		</div>
+	</div>
+</script>

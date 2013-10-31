@@ -1,0 +1,86 @@
+<div class="accordion slidable" id="main-panel-accordion">
+	<script type="text/javascript" src="{{ STATIC_URL }}/javascript/cronometro.js"></script>
+	
+	<!-- Seccion proyectos -->
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" id="proyectos">
+				<i class="icon-folder-open"></i> Proyectos
+			</a>
+		</div>
+	</div>
+	
+	<!-- Usuario -->
+	<div class="accordion-group">
+		<div class="accordion-heading">
+		  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+			<i class="icon-user"></i> Usuario(<span id="username-label"></span>)
+		  </a>
+		</div>
+		<div id="collapseFour" class="accordion-body collapse">
+		  <div class="accordion-inner">
+			<div class="acordion" id="acordion-usuario">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" id="logout-btn" >
+							<i class="icon-off"></i> LogOut
+						</a>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-usuario" href="#collapse-password">
+							<i class="icon-eye-open"></i> Cambiar password
+						</a>
+					</div>
+					<div id="collapse-password" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table>
+								<tr>
+									<td><label>Antigua: </label></td>
+									<td><input class="input-medium"type="text" value=""></td>
+								</tr>
+								<tr>
+									<td><label>Nueva: </label></td>
+									<td><input class="input-medium"type="text" value=""></td>
+								</tr>
+								<tr>
+									<td><label>Confirmar: </label></td>
+									<td><input class="input-medium"type="text" value=""></td>
+								</tr>
+								<tr>
+									<td colspan="2"><input type="submit" class="btn" value="Cambiar"/></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-usuario" href="#collapse-settings">
+							<i class="icon-wrench"></i> Settings
+						</a>
+					</div>
+					<div id="collapse-settings" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table>
+								<tr>
+									<td colspan=2><label class="checkbox">
+										<input type="checkbox" id="tooltips-checkbox"> Tooltips
+									</label></td>
+								</tr>
+								<tr>
+									<td colspan="2"><input id="save-settings-btn" type="submit" class="btn" value="Guardar"/></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	<script type="text/javascript" src="{{ STATIC_URL }}/javascript/MainPanel.js"></script>
+	
+</div>
